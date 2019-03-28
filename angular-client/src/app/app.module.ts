@@ -7,15 +7,20 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 /* Hier werden PrimeNG Module geladen */
 import { ButtonModule } from 'primeng/button';
+import { NavigationComponent } from './navigation/navigation.component';
+import { MenubarModule } from 'primeng/menubar';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
+    MenubarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
