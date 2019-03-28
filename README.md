@@ -1,9 +1,9 @@
 # spring-boot-angular-boilerplate
-Dieses Boilerplate besteht aus einem aktuellen Spring Boot Backend
-einem Angular 7 Client und ist mit einem JWT Token Authentifizierungssystem
+Dieses Boilerplate besteht aus einem Spring Boot Backend,
+einem Angular 7 Client und wird später mit einem JWT Token Authentifizierungssystem
 abgesichert.
 
-Zukünftig wird natürlich das Ganze in Docker verpackt, sodass keine Abhängigkeiten
+Zukünftig wird natürlich das Ganze auch in Docker verpackt, sodass keine Abhängigkeiten
 mehr im Host installiert werden müssen.
 
 Derzeit ist dieses Boilerplate in der Entwicklungsphase, daher ist dieser
