@@ -18,3 +18,7 @@ spring:
     password: boilerplate
     driver-class-name: org.postgresql.Driver
 
+jwt:
+  header: Authorization
+  expires_in: 6000
+  secret: change_the_key_here
