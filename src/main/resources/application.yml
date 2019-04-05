@@ -1,0 +1,20 @@
+app:
+  name: Boilerplate
+
+spring:
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob.non_contextual_creation: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/boilerplate
+    username: boilerplate
+    password: boilerplate
+    driver-class-name: org.postgresql.Driver
+
