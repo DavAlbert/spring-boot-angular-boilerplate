@@ -17,11 +17,11 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  loginUser(UserLoginRequest: UserLoginRequest) {
-    return this.httpClient.post(this.hostPath + this.authenticationPath + this.registerPath, UserLoginRequest);
+  loginUser(userLoginRequest: UserLoginRequest) {
+    return this.httpClient.post(this.hostPath + this.authenticationPath + this.loginPath, userLoginRequest);
   }
 
   registerUser(userRegisterRequest: UserRegisterRequest) {
-      return this.httpClient.post(this.hostPath + this.authenticationPath + this.loginPath, UserRegisterRequest);
+      return this.httpClient.post(this.hostPath + this.authenticationPath + this.registerPath, userRegisterRequest);
   }
 }

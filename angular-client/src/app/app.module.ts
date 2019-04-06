@@ -14,6 +14,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
 import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     ButtonModule,
     MenubarModule,
+    HttpClientModule,
     PanelModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
