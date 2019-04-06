@@ -23,7 +23,7 @@ public class TokenHelper {
     @Value("${jwt.header}")
     private String AUTH_HEADER;
 
-    private SignatureAlgorithm SIGNATURE_ALGORITHM = SignatureAlgorithm.ES512;
+    private SignatureAlgorithm SIGNATURE_ALGORITHM = SignatureAlgorithm.HS512;
 
     public int getExpiredIn() {
         return this.EXPIRED_IN;

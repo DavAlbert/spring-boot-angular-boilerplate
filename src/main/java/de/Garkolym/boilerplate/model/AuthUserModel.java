@@ -98,4 +98,8 @@ public class AuthUserModel extends AbstractEntity implements UserDetails, Serial
     public boolean isEnabled() {
         return true;
     }
+
+    public void setAuthorities(List<Authority> authorities) {
+        this.authorities = authorities;
+    }
 }
