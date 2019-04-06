@@ -21,4 +21,4 @@ spring:
 jwt:
   header: Authorization
   expires_in: 6000
-  secret: change_the_key_here
+  secret: secret
