@@ -14,8 +14,8 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     this.navItems = [
-      { label: 'Einloggen', icon: 'pi pi-fw pi-user' },
-      { label: 'Registrieren', icon: 'pi pi-fw pi-key' },
+      { label: 'Einloggen', icon: 'pi pi-fw pi-user', routerLink: 'login' },
+      { label: 'Registrieren', icon: 'pi pi-fw pi-key', routerLink: 'register' },
     ]
   }
 
