@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
-import { Observable } from 'rxjs';
-import { UserInfoResponse } from '../models/responses/userinfo.response';
 
 @Component({
   selector: 'app-overview',
@@ -24,7 +22,7 @@ export class OverviewComponent implements OnInit {
       this.lastName = res.lastName;
       this.email = res.email;
     }, err => {
-      console.log(err);
+      this.userService.setLoggedIn(false);
     });
   }
 

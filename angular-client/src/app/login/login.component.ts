@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { UserLoginRequest } from '../models/requests/user-login.request';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,12 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private router: Router,
-    private userService: UserService) { }
+    private userService: UserService, private messageService: MessageService) { }
+
+  showError(message: string) {
+    this.messageService.clear();
+    this.messageService.add({ severity:'error', detail: message });
+  }
 
   buildLoginForm() {
     this.loginForm = this.formBuilder.group({
@@ -33,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.userService.setLoggedIn(true);
       this.router.navigate(['overview']);
     }, err => {
-      console.log(err);
+      this.showError('Benutzername oder Kennwort falsch!');
     });
   }
 

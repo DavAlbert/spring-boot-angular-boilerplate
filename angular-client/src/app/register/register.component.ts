@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { UserRegisterRequest } from '../models/requests/user-register.request';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +15,7 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private router: Router,
-    private userService: UserService) { }
+    private userService: UserService, private messageService: MessageService) { }
 
   
   buildRegisterForm() {
@@ -31,6 +32,11 @@ export class RegisterComponent implements OnInit {
     this.buildRegisterForm();
   }
 
+  showError(message: string) {
+    this.messageService.clear();
+    this.messageService.add({ severity:'error', detail: message });
+  }
+
   onSubmit() {
     let registerRequest = new UserRegisterRequest();
     registerRequest.username = this.registerForm.controls.username.value;
@@ -44,7 +50,7 @@ export class RegisterComponent implements OnInit {
       this.userService.setLoggedIn(true);
       this.router.navigate(['overview']);
     }, err => {
-      console.log(err);
+      this.showError('Registrierung fehlgeschlagen!');
     })
   }
 
