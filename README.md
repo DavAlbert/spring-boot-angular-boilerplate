@@ -13,3 +13,9 @@ nicht produktiv einsetzbar.
 
 Hier schonmal eine kleine Vorschau vom Frontend Login
 ![Frontend Preview](https://github.com/DavAlbert/spring-boot-angular-boilerplate/blob/master/screenshots/angular-login-preview.png?raw=true)
+
+# Registrierung per REST Call
+![restRegister](https://github.com/DavAlbert/spring-boot-angular-boilerplate/blob/master/screenshots/register-rest.png?raw=true)
+
+# Login per REST Call
+![restLogin](https://github.com/DavAlbert/spring-boot-angular-boilerplate/blob/master/screenshots/login-rest.png?raw=true)
