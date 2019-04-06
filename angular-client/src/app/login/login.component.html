@@ -1,6 +1,7 @@
 <div class="ui-fluid login-page-cover">
   <div class="ui-g">
     <div class="ui-sm-12 ui-md-6 ui-md-offset-3 ui-lg-4 ui-lg-offset-4 ui-xl-4 ui-xl-offset-4">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <p-panel>
         <p-header>
           Bitte logge dich ein
@@ -8,22 +9,23 @@
         <div class="ui-input-field">
           <div class="ui-inputgroup">
               <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-              <input type="text" pInputText placeholder="Nutzername">         
+              <input formControlName="username" type="text" pInputText placeholder="Nutzername">         
           </div>
         </div>
         <div class="ui-input-field">
           <div class="ui-inputgroup">
               <span class="ui-inputgroup-addon"><i class="fa fa-key"></i></span>
-              <input type="password" pInputText placeholder="Passwort">         
+              <input formControlName="password" type="password" pInputText placeholder="Passwort">
           </div>
         </div>
         <p-footer>
           <div class="ui-button-group-right">
-            <p-button label="Anmelden"></p-button>
-            <p-button label="Registrieren"></p-button>
+            <p-button label="Registrieren" (click)="navigateToRegister()"></p-button>
+            <p-button [disabled]="loginForm.invalid" type="submit" label="Anmelden"></p-button>
           </div>
         </p-footer>
-      </p-panel>
+        </p-panel>
+      </form>
     </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
 import { BrowserModule, } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 /* Hier werden die Komponenten geladen */
@@ -12,12 +13,14 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { MenubarModule } from 'primeng/menubar';
 import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NavigationComponent
+    NavigationComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { InputTextModule } from 'primeng/inputtext';
     MenubarModule,
     PanelModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     InputTextModule,
   ],
   providers: [],
