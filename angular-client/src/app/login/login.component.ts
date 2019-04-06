@@ -29,7 +29,9 @@ export class LoginComponent implements OnInit {
     loginRequest.password = this.loginForm.controls.password.value;
 
     this.userService.loginUser(loginRequest).subscribe(res => {
-      console.log(res);
+      localStorage.setItem('Access-Token', res.access_token);
+      this.userService.setLoggedIn(true);
+      this.router.navigate(['overview']);
     }, err => {
       console.log(err);
     });

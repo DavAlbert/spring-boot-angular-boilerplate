@@ -40,7 +40,9 @@ export class RegisterComponent implements OnInit {
     registerRequest.password = this.registerForm.controls.password.value;
     
     this.userService.registerUser(registerRequest).subscribe(res => {
-      console.log(res);
+      localStorage.setItem('Access-Token', res.access_token);
+      this.userService.setLoggedIn(true);
+      this.router.navigate(['overview']);
     }, err => {
       console.log(err);
     })

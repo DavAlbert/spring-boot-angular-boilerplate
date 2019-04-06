@@ -1,1 +1,2 @@
-<p-menubar [model]="navItems"></p-menubar>
+<p-menubar *ngIf="!userService.loggedIn" [model]="navItems"></p-menubar>
+<p-menubar *ngIf="userService.loggedIn" [model]="navItemsLoggedIn"></p-menubar>
