@@ -23,7 +23,6 @@ public class MyUserDetailsService implements UserDetailsService {
     private final AuthenticationManager authenticationManager;
 
     @Bean
-    @Autowired
     public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
