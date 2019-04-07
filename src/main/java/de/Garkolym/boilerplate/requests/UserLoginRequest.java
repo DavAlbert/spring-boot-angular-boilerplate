@@ -1,4 +1,4 @@
-package de.Garkolym.boilerplate.requests;
+package de.garkolym.boilerplate.requests;
 
 import java.io.Serializable;
 

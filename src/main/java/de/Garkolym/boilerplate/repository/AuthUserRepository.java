@@ -1,6 +1,6 @@
-package de.Garkolym.boilerplate.repository;
+package de.garkolym.boilerplate.repository;
 
-import de.Garkolym.boilerplate.model.AuthUserModel;
+import de.garkolym.boilerplate.model.AuthUserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

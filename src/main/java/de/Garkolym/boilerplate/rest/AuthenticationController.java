@@ -1,11 +1,11 @@
-package de.Garkolym.boilerplate.rest;
+package de.garkolym.boilerplate.rest;
 
-import de.Garkolym.boilerplate.model.AuthUserModel;
-import de.Garkolym.boilerplate.requests.UserLoginRequest;
-import de.Garkolym.boilerplate.requests.UserRegisterRequest;
-import de.Garkolym.boilerplate.responses.TokenResponse;
-import de.Garkolym.boilerplate.security.TokenHelper;
-import de.Garkolym.boilerplate.services.MyUserDetailsService;
+import de.garkolym.boilerplate.model.AuthUserModel;
+import de.garkolym.boilerplate.requests.UserLoginRequest;
+import de.garkolym.boilerplate.requests.UserRegisterRequest;
+import de.garkolym.boilerplate.responses.TokenResponse;
+import de.garkolym.boilerplate.security.TokenHelper;
+import de.garkolym.boilerplate.services.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

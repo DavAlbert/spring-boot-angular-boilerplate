@@ -1,4 +1,4 @@
-package de.Garkolym.boilerplate.responses;
+package de.garkolym.boilerplate.responses;
 
 import java.io.Serializable;
 

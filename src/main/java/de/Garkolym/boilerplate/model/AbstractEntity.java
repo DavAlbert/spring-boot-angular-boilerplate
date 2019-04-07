@@ -1,4 +1,4 @@
-package de.Garkolym.boilerplate.model;
+package de.garkolym.boilerplate.model;
 
 import javax.persistence.*;
 import java.io.Serializable;

@@ -1,4 +1,4 @@
-package de.Garkolym.boilerplate.security;
+package de.garkolym.boilerplate.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
