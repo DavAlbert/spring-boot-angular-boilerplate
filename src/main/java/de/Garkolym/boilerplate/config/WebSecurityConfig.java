@@ -1,15 +1,14 @@
-package de.Garkolym.boilerplate.config;
+package de.garkolym.boilerplate.config;
 
-import de.Garkolym.boilerplate.security.TokenHelper;
-import de.Garkolym.boilerplate.security.auth.RestAuthenticationEntryPoint;
-import de.Garkolym.boilerplate.security.auth.TokenAuthenticationFilter;
-import de.Garkolym.boilerplate.services.MyUserDetailsService;
+import de.garkolym.boilerplate.security.TokenHelper;
+import de.garkolym.boilerplate.security.auth.RestAuthenticationEntryPoint;
+import de.garkolym.boilerplate.security.auth.TokenAuthenticationFilter;
+import de.garkolym.boilerplate.services.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;

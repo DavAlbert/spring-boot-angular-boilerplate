@@ -1,6 +1,6 @@
-package de.Garkolym.boilerplate.security.auth;
+package de.garkolym.boilerplate.security.auth;
 
-import de.Garkolym.boilerplate.security.TokenHelper;
+import de.garkolym.boilerplate.security.TokenHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,19 +26,28 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
-        String username;
         String authToken = tokenHelper.getToken(httpServletRequest);
-        if (authToken != null) {
-            username = tokenHelper.getUsernameFromToken(authToken);
-            if (username != null) {
-                UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-                if (tokenHelper.validateToken(authToken, userDetails)) {
-                    TokenBasedAuthentication authentication = new TokenBasedAuthentication(userDetails);
-                    authentication.setToken(authToken);
-                    SecurityContextHolder.getContext().setAuthentication(authentication);
-                }
-            }
+
+        if (authToken == null) {
+            return;
         }
+
+        String userName = tokenHelper.getUsernameFromToken(authToken);
+
+        if (userName == null) {
+            return;
+        }
+
+        UserDetails userDetails = userDetailsService.loadUserByUsername(userName);
+
+        if (!tokenHelper.validateToken(authToken, userDetails)) {
+            return;
+        }
+
+        TokenBasedAuthentication authentication = new TokenBasedAuthentication(userDetails);
+        authentication.setToken(authToken);
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
         filterChain.doFilter(httpServletRequest, httpServletResponse);
     }
 

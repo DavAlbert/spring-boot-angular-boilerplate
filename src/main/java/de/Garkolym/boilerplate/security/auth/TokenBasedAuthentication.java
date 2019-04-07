@@ -1,4 +1,4 @@
-package de.Garkolym.boilerplate.security.auth;
+package de.garkolym.boilerplate.security.auth;
 
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;

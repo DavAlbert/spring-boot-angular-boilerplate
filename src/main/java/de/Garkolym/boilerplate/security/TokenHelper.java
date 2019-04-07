@@ -1,6 +1,5 @@
-package de.Garkolym.boilerplate.security;
+package de.garkolym.boilerplate.security;
 
-import de.Garkolym.boilerplate.model.AuthUserModel;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

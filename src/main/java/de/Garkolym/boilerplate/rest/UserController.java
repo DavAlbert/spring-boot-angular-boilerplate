@@ -1,8 +1,8 @@
-package de.Garkolym.boilerplate.rest;
+package de.garkolym.boilerplate.rest;
 
-import de.Garkolym.boilerplate.model.AuthUserModel;
-import de.Garkolym.boilerplate.repository.AuthUserRepository;
-import de.Garkolym.boilerplate.responses.UserInformationResponse;
+import de.garkolym.boilerplate.model.AuthUserModel;
+import de.garkolym.boilerplate.repository.AuthUserRepository;
+import de.garkolym.boilerplate.responses.UserInformationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
